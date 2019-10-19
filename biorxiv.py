@@ -6,7 +6,7 @@ from time import sleep
 
 url0 = "https://www.biorxiv.org"
 my_header = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36"}
-r0 = requests.get(url = url0, headers = my_header)
+#r0 = requests.get(url = url0, headers = my_header)
 #page = 20
 
 def getProxyPool():
@@ -52,7 +52,7 @@ def getPage(page_url, ip_pool):
 if __name__ == '__main__':
 	with open("biorxiv_summary.txt", "a") as ff:
 		ip_pool = getProxyPool()
-		for p in range(0,6199:):
+		for p in range(0,6199):
 			sleep(randint(5,20))
 			if p%100==0:
 				ip_pool = getProxyPool()
